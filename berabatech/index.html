@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Gastos - BerabaTech</title>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#FAFAE6] font-sans">
+    <div class="flex">
+      <div
+        class="w-64 h-screen bg-[#365b6d] text-white p-6 flex flex-col space-y-4"
+      >
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-10 h-10 bg-[#FFFFFF] rounded-full flex items-center justify-center border border-[#FFFFFF]"
+          >
+            <img
+              src="logo.png"
+              alt="Logo BerabaTech"
+              class="w-8 h-8 object-contain"
+            />
+          </div>
+          <span class="text-2xl font-semibold">BerabaTech</span>
+        </div>
+        <nav class="flex flex-col space-y-4 mt-6">
+          <a href="#" class="hover:bg-blue-700 py-2 px-4 rounded-md"
+            >Dashboard</a
+          >
+          <a href="#" class="hover:bg-blue-700 py-2 px-4 rounded-md">Receita</a>
+          <a href="#" class="hover:bg-blue-700 py-2 px-4 rounded-md">Gastos</a>
+          <a href="#" class="hover:bg-blue-700 py-2 px-4 rounded-md">Metas</a>
+          <a href="#" class="hover:bg-blue-700 py-2 px-4 rounded-md"
+            >Investimentos</a
+          >
+          <a href="#" class="hover:bg-blue-700 py-2 px-4 rounded-md">Perfil</a>
+          <a href="#" class="hover:bg-blue-700 py-2 px-4 rounded-md"
+            >Configurações</a
+          >
+        </nav>
+      </div>
+
+      <div class="flex-1 ml-0">
+        <header
+          class="bg-[#2d8bba] text-white py-6 px-4 flex items-center justify-between rounded-b-3xl w-full"
+        >
+          <div class="flex items-center space-x-5">
+            <div
+              class="w-10 h-10 bg-[#FFFFFF] rounded-full flex items-center justify-center"
+            >
+              <span class="text-lg font-semibold text-[#2f5f98]">AM</span>
+            </div>
+            <h1 class="text-2xl font-semibold">Olá, Amanda</h1>
+          </div>
+
+          <div class="flex items-center space-x-4">
+            <div class="relative">
+              <input
+                type="text"
+                class="px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                placeholder="Pesquisar..."
+              />
+              <i class="fas fa-search absolute top-2 right-3 text-gray-500"></i>
+            </div>
+          </div>
+        </header>
+        <main class="container mx-auto mt-10 px-4">
+          <div class="flex justify-center mb-8">
+            <div
+              class="w-24 h-24 bg-white rounded-full flex items-center justify-center border border-[#365b6d]"
+            >
+              <img src=logo.png alt="Logo BerabaTech" class="w-20
+              h-20 object-contain" />
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-semibold text-center mb-8">
+            Cadastro de Gastos
+          </h2>
+          <form
+            class="bg-white p-6 rounded-lg shadow-md w-full max-w-xl mx-auto"
+          >
+            <div class="mb-4">
+              <label for="descricao" class="block text-sm font-semibold"
+                >Descrição</label
+              >
+              <input
+                type="text"
+                id="descricao"
+                class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                placeholder="Ex.: Conta de Luz"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label for="valor" class="block text-sm font-semibold"
+                >Valor</label
+              >
+              <input
+                type="number"
+                id="valor"
+                class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                placeholder="Ex.: 150.00"
+                required
+              />
+            </div>
+
+            <div class="mb-4">
+              <label for="categoria" class="block text-sm font-semibold"
+                >Categoria</label
+              >
+              <select
+                id="categoria"
+                class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                required
+              >
+                <option selected disabled>Selecione uma categoria</option>
+                <option value="alimentacao">Alimentação</option>
+                <option value="transporte">Transporte</option>
+                <option value="saude">Saúde</option>
+                <option value="outros">Outros</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label for="data" class="block text-sm font-semibold">Data</label>
+              <input
+                type="date"
+                id="data"
+                class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                required
+              />
+            </div>
+
+            <div class="text-center">
+              <button
+                type="submit"
+                class="w-full py-2 bg-[#2f5f98] text-white rounded-lg font-semibold hover:bg-blue-700"
+              >
+                Salvar gasto
+              </button>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
+
+    <footer class="bg-gray-100 text-center py-4 mt-8">
+      <p class="text-gray-600 text-sm">
+        &copy; 2024 BerabaTech. Todos os direitos reservados.
+      </p>
+    </footer>
+  </body>
+</html>
